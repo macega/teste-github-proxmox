@@ -2,8 +2,10 @@ version: '3.8'
 
 services:
   teste-web:
-    build: .
+    image: nginx:alpine
     container_name: teste-github-proxmox
     ports:
       - "8080:80"
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
     restart: always
