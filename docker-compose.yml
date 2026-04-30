@@ -5,7 +5,7 @@ services:
     image: nginx:alpine
     container_name: teste-github-proxmox
     ports:
-      - "8080:80"
+      - "8085:80"
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html
     restart: always
